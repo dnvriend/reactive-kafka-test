@@ -1,0 +1,10 @@
+
+kafka:
+  image: dnvriend/kafka
+  container_name: kafka
+  environment:
+    - "ADVERTISED_HOST=${IP_VM_DEV}"
+    - "ADVERTISED_PORT=9092"
+  ports:
+    - "2181:2181" # 2181 is zookeeper
+    - "9092:9092" # 9092 is kafka
